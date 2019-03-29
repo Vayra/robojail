@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 <template>
   <div id="app">
     <link
@@ -63,7 +61,7 @@ export default {
         data: payload
       }).then(function(resp) {
         criminals = resp.data
-      }, error => {
+      }, () => {
         criminals = data
       });
       this.criminals = criminals;
