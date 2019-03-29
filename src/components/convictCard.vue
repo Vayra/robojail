@@ -11,7 +11,7 @@ export default {
   name: "convictCard",
   props: {
     name: String,
-    id: String,
+    id: Number,
     headshot: String,
     crime: String
   }

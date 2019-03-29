@@ -8,8 +8,8 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     >
-    <h1>Robot jail</h1>
-    <img alt="Vue logo" src="./assets/jail.png">
+    <h1>Robot Jail</h1>
+    <img alt="Jail logo" src="./assets/jail.png">
     <!--<HelloWorld msg="FAKEJson fun times"/>-->
     <div class="row">
       <div class="col" v-for="criminal in criminals" v-bind:key="criminal.id">
@@ -29,7 +29,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import convictCard from "./components/convictCard.vue";
 import data from "./assets/data.json";
 
-//const axios = require('axios')
+const axios = require('axios')
 
 export default {
   name: "app",
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     async getData() {
-      /*
+      
       let criminals;
       let payload = {
         token: "CaKtpLTHh1Fi3Nh-FawIew",
@@ -66,9 +66,11 @@ export default {
         data: payload
       }).then(function(resp) {
         criminals = resp.data
-      });*/
+      }, error => {
+        criminals = data
+      });
       console.log(data);
-      this.criminals = data;
+      this.criminals = criminals;
       //console.log(this.criminals)
     }
   }
