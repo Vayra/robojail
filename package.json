@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
