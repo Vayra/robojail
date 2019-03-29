@@ -10,7 +10,6 @@
     >
     <h1>Robot Jail</h1>
     <img alt="Jail logo" src="./assets/jail.png">
-    <!--<HelloWorld msg="FAKEJson fun times"/>-->
     <div class="row">
       <div class="col" v-for="criminal in criminals" v-bind:key="criminal.id">
         <convictCard
@@ -25,7 +24,6 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import convictCard from "./components/convictCard.vue";
 import data from "./assets/data.json";
 
@@ -34,7 +32,6 @@ const axios = require('axios')
 export default {
   name: "app",
   components: {
-    HelloWorld,
     convictCard
   },
   data() {
@@ -69,7 +66,6 @@ export default {
       }, error => {
         criminals = data
       });
-      console.log(data);
       this.criminals = criminals;
       //console.log(this.criminals)
     }
